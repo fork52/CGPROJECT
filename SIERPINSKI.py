@@ -1,4 +1,4 @@
-import turtle ,os
+import turtle ,os,random
 turtle.title('SIERINSKIS\'S TRAINGLE ')
 
 
@@ -19,7 +19,8 @@ def getMid(p1,p2):
 def sierpinski(points,degree,myTurtle):
     try:
         colormap = ['blue','red','green','white','yellow',
-                    'violet','orange']
+                    'purple','orange']
+
         drawTriangle(points,colormap[degree],myTurtle)
         if degree > 0:
             sierpinski([points[0],
