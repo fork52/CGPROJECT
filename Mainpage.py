@@ -6,6 +6,10 @@ dict_Of_Fractals={ 1 : 'Bransley_Fern',
                    2 : 'SIERPINSKI',
                    3 : 'TREE1',
                    4 : 'TREE2',
+                   5: 'logistic_map',
+                   6 : 'julia',
+                   7: 'koch',
+                   8: 'hofstader_butterfly'
                    }
 
 
@@ -35,6 +39,19 @@ class GUI:
         self.Frac4Button = tkinter.Button(master,width=20,height=2,text = 'TREE2',command = self.Frac4)
         self.Frac4Button.grid(padx=self.paddingx,pady=self.paddingy,row=3,column =10)
 
+        self.Frac5Button = tkinter.Button(master, width=20, height=2, text='Logistic Map', command=self.Frac5)
+        self.Frac5Button.grid(padx=self.paddingx, pady=self.paddingy, row=4, column=10)
+
+        self.Frac6Button = tkinter.Button(master, width=20, height=2, text='Julia', command=self.Frac6)
+        self.Frac6Button.grid(padx=self.paddingx, pady=self.paddingy, row=5, column=10)
+
+
+        self.Frac7Button = tkinter.Button(master, width=20, height=2, text='Koch Curve', command=self.Frac7)
+        self.Frac7Button.grid(padx=self.paddingx, pady=self.paddingy, row=6, column=10)
+
+        self.Frac8Button = tkinter.Button(master, width=20, height=2, text='Hofstader ButterFly', command=self.Frac8)
+        self.Frac8Button.grid(padx=self.paddingx, pady=self.paddingy, row=7, column=10)
+
 
     def Frac1(self):
         self.playFile(1)
@@ -51,6 +68,23 @@ class GUI:
     def Frac4(self):
         self.playFile(4)
         self.master.quit()
+
+    def Frac5(self):
+        self.playFile(5)
+        self.master.quit()
+
+    def Frac6(self):
+        self.playFile(6)
+        self.master.quit()
+
+    def Frac7(self):
+        self.playFile(7)
+        self.master.quit()
+
+    def Frac8(self):
+        self.playFile(8)
+        self.master.quit()
+
 
     def playFile(self,fractalNumber):
         '''PLAY THE FRACTAL ANIMATION'''
