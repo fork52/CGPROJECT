@@ -1,7 +1,7 @@
 import turtle ,os,random
 turtle.title('SIERINSKIS\'S TRAINGLE ')
 
-
+#
 def drawTriangle(points,color,myTurtle):
     myTurtle.fillcolor(color)
     myTurtle.up()
