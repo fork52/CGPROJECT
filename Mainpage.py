@@ -9,7 +9,8 @@ dict_Of_Fractals={ 1 : 'Bransley_Fern',
                    5: 'logistic_map',
                    6 : 'julia',
                    7: 'koch',
-                   8: 'hofstader_butterfly'
+                   8: 'hofstader_butterfly',
+                   9: 'SIERPINSKICARPET'
                    }
 
 
@@ -22,7 +23,7 @@ class GUI:
         master.title('Choose Fractal:')
 
         self.master = master
-        self.fractal =None
+        self.fractal =Nonea
         self.paddingx = 110
         self.paddingy = 15
 
@@ -52,6 +53,8 @@ class GUI:
         self.Frac8Button = tkinter.Button(master, width=20, height=2, text='Hofstader ButterFly', command=self.Frac8)
         self.Frac8Button.grid(padx=self.paddingx, pady=self.paddingy, row=7, column=10)
 
+        self.Frac8Button = tkinter.Button(master, width=20, height=2, text='Sierpinski Carpet', command=self.Frac9)
+        self.Frac8Button.grid(padx=self.paddingx, pady=self.paddingy, row=8, column=10)
 
     def Frac1(self):
         self.playFile(1)
@@ -83,6 +86,11 @@ class GUI:
 
     def Frac8(self):
         self.playFile(8)
+        self.master.quit()
+
+
+    def Frac9(self):
+        self.playFile(9)
         self.master.quit()
 
 
